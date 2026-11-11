@@ -3,38 +3,40 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Inclusive Form Flow</title><link rel="stylesheet" href="styles.css">
+        <title>Raceday Application</title><link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header class="page-header">
-            <p class="eyebrow">Application, Registration, or Request</p>
-            <h1>Replace with a specific task title</h1>
-            <p class="lede">Explain who this form is for, what it accomplishes, how long it takes, and what happens after submission.</p>
+            <p class="eyebrow">Application</p>
+            <h1>Raceday Application</h1>
+            <p class="lede">This form is for all who plan on attending RACEDAY 2026, it acts only as a demonstration, does not send any personal information to a third party, should take about 10 minutes, and will not prompt any confirmation emails.</p>
+            <p>Fields such as "Team Name" are only required to be filled for those who are running as a part of a team and have checked the corresponding box.</p>
         </header>
         <main>
             <section id="expectations">
-                <h2>F1 Purpose and Expectations</h2>
-                <p>State the required/optional convention and a concise privacy notice. Use fictional test data only.</p>
+                <h2>Participant Basic Information</h2>
+                <p>Use this section to fill in the basic racer information details.</p>
+                <p>NOTICE: RACEDAY 2026 is a completely fictional event. Any and all visitors to this website should avoid entering real personal information or personal identifiers. Use fictional information only when completing this registration form.</p>
             </section>
-            <form action="" method="get">
+            <form method="get">
+                <p class="help">Fields marked with * are mandatory.</p>
                 <fieldset>
                     <legend>Contact information</legend>
-                    <p class="help">Replace or extend this group based on your justified field inventory.</p>
                     <div class="field">
-                        <label for="full_name">Full Name</label>
+                        <label for="full_name">Full Name *</label>
                         <input id="full_name" name="full_name" type="text" autocomplete="name" required>
                     </div>
                     <div class="field">
-                        <label for="age_verified">Are you at least 18 years old?</label>
+                        <label for="age_verified">Are you at least 18 years old? *</label>
                         <input id="age_verified" name="age_verified" type="checkbox" required>
                     </div>
                     <div class="field">
-                        <label for="email">Email address (required)</label>
+                        <label for="email">Email address *</label>
                         <input id="email" name="email" type="email" autocomplete="email" required>
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>Race Selection</legend>
+                    <legend>Race Selection *</legend>
                     <p class="help">All participants must select the one intended race they wish to compete in.</p>
                     <label class="choice">
                         <input type="radio" name="race_option" value="5K" required> 5K </label>
@@ -43,7 +45,7 @@
                         <label class="choice"><input type="radio" name="race_option" value="Full Marathon" required> Full Marathon </label>
                     </fieldset>
                     <fieldset>
-                        <legend>Bib Retrieval</legend>
+                        <legend>Bib Retrieval *</legend>
                         <p class="help">Select how you would like to retrieve your race bib. It can be picked up the day of the event or shipped to an address of your choosing. </p>
                         <label class="choice">
                             <input type="radio" name="bib_retrieval_method" value="at_event" required> At Event
@@ -55,10 +57,10 @@
                     <div class="field">
                         <p class="help">Enter the full shipping address where you would like your race bib to be sent.</p>
                         <label for="delivery_address">Shipping Address</label>
-                        <input id="delivery_address" type="text" name="delivery_address" autocomplete="street-address">
+                        <input id="delivery_address" type="text" name="delivery_address" >
                     </div>
                     <fieldset>
-                        <legend>Team Participation</legend>
+                        <legend>Team Participation *</legend>
                         <p class="help">Indicate if you are participating as part of a team and provide the team name if applicable.</p>
                         <label class="choice">
                             <input type="radio" name="team_participation" value="yes" required> Yes
@@ -74,22 +76,80 @@
                     <button type="submit">Submit race application!</button>
                 </form>
                 <section id="states">
-                    <h2>F5 · State and Recovery Specimen</h2>
-                    <p>Document default, focus, required, valid, invalid, disabled, and a static server-returned error. Keep this section separate from the primary blank form when necessary to avoid misleading users.</p>
+                    <h2>Registration Errors</h2>
+                    <p>Registration errors might look like these examples below. If you encounter an error, attempt the reccomended fix action.</p>
                     <div class="error-summary">
-                        <h3>There is a problem with the fictional submission</h3>
+                        <h3>There is a problem with the registration submission</h3>
                         <p><a href="#error-example">Email address needs attention</a></p>
                     </div>
                     <div class="field field-error">
                         <label for="error-example">Email address</label>
-                        <input id="error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
-                        <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
+                        <input id="error-example" type="email" value="runneremail.example" aria-invalid="true" aria-describedby="error-message">
+                        <p id="error-message"><strong>Error:</strong> Enter an address in the format runner@example.com.</p>
                     </div>
-                    <button type="button" disabled>Disabled example</button>
+                    <button type="button" disabled>Disabled</button>
+                    <div class="error-summary" role="alert">
+                        <h3>Registration couldn't be processed</h3>
+                        <p>We couldn't process your application due to an error. Please try again.</p>
+                    </div>
                 </section>
                 <section id="documentation">
-                    <h2>F2 and F6 · Planning and Evidence</h2>
-                    <p>Link your field inventory, state matrix, fictional test-data list, completed test record, and AI disclosure.</p>
+                    <h2>RACEDAY 2026 - Planning and Evidence</h2>
+                    <p> <a href="field-inventory-template.html">Field Inventory Template</a></p>
+                    <h3>Form Testing</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">State</th>
+                                <th scope="col">Expected Behavior</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Default State</td>
+                                <td>Form blocks have labels before anything is input.</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Focus State</td>
+                                <td>Active field displays a visible focus indicator.</td>
+                            </tr>
+                            <tr>
+                                <td>Valid State</td>
+                                <td>Field displays a visible valid indicator when the input is valid.</td>
+                            </tr>
+                            <tr>
+                                <td>Required State</td>
+                                <td>Field displays a visible required indicator when the input is required but not provided.</td>
+                            </tr>
+                            <tr>
+                                <td>Invalid State</td>
+                                <td>Field displays a visible invalid indicator when the input is not valid.</td>
+                            </tr>
+                            <tr>
+                                <td>Disabled State</td>
+                                <td>Field is not interactive and displays a visible disabled indicator.</td>
+                            </tr>
+                            <tr>
+                                <td>Server Error</td>
+                                <td>Field displays a visible server error indicator when there is an error from the server.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Fake Test Data</h3>
+                    <p><strong>Test 1 - Blank Required Fields:</strong>Tried to submit the form with all required fields left blank. Browser stopped submission and id'd required fields.</p>
+                    <p><strong>Test 2 - Invalid Email:</strong>Tried to submit the form with an invalid email address. Browser stopped submission and id'd the invalid email field.</p>
+                    <p><strong>Test 3 - Valid Form Submission:</strong>Tried to submit the form with all required fields filled correctly. Left all optional fields empty. Form submitted successfully.</p>
+                    <p><strong>Test 4 - Error Recovery:</strong>Selected the email error summery hyperlink and the browser focused on the email field for correction. Corrected the email and resubmitted the form successfully.</p>
+                    <p><strong>Test 5 - Disabled Field:</strong>Tried to interact with a disabled field. Field did not respond and displayed a visible disabled indicator.</p>
+                    <p><strong>Test 6 - Keyboard Accessibility:</strong>Used the Tab key to navigate through the form fields. All fields were accessible and could be interacted with using the keyboard without the need for a mouse.</p>
+                    <p><strong>Test 7 - Responsive Layout:</strong>Resized the browser window to different widths. Form layout adjusted appropriately to maintain usability and readability on 320px,768px, 1280px and 200% zoom.</p>
+                    <p><strong>Test 8 - HTML Check:</strong>Ran index.html through W3C checker, fixed two reported errors and none returned..</p>
+                    <p><strong>Test 9 - CSS Check:</strong>Verified that all CSS styles were applied correctly, including button hover states, field borders, and legend colors, and that the overall layout remained consistent across different screen sizes. No errors returned.</p>
+
+                    <h3>AI Disclosure</h3>
+                    <p>ChatGPT was used ONLY for questions about task flow. All code and content were created independently, without direct assistance from the AI.</p>
                 </section>
             </main>
         </body>
