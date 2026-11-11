@@ -13,16 +13,20 @@
         </header>
         <main>
             <section id="expectations">
-                <h2>F1 · Purpose and Expectations</h2>
+                <h2>F1 Purpose and Expectations</h2>
                 <p>State the required/optional convention and a concise privacy notice. Use fictional test data only.</p>
             </section>
             <form action="" method="get">
                 <fieldset>
-                    <legend>F3 · Contact information</legend>
+                    <legend>Contact information</legend>
                     <p class="help">Replace or extend this group based on your justified field inventory.</p>
                     <div class="field">
-                        <label for="name">Name</label>
-                        <input id="name" name="name" type="text" autocomplete="name">
+                        <label for="full_name">Full Name</label>
+                        <input id="full_name" name="full_name" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="age_verified">Are you at least 18 years old?</label>
+                        <input id="age_verified" name="age_verified" type="checkbox" required>
                     </div>
                     <div class="field">
                         <label for="email">Email address (required)</label>
@@ -30,18 +34,44 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>F3 · Request choices</legend>
-                    <p class="help">Use an appropriate radio, checkbox, or select structure for the task.</p>
+                    <legend>Race Selection</legend>
+                    <p class="help">All participants must select the one intended race they wish to compete in.</p>
                     <label class="choice">
-                        <input type="radio" name="request_type" value="option-a"> Replace with option A</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b"> Replace with option B</label>
+                        <input type="radio" name="race_option" value="5K" required> 5K </label>
+                        <label class="choice"><input type="radio" name="race_option" value="10K" required> 10K </label>
+                        <label class="choice"><input type="radio" name="race_option" value="Half Marathon" required> Half Marathon </label>
+                        <label class="choice"><input type="radio" name="race_option" value="Full Marathon" required> Full Marathon </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Bib Retrieval</legend>
+                        <p class="help">Select how you would like to retrieve your race bib. It can be picked up the day of the event or shipped to an address of your choosing. </p>
+                        <label class="choice">
+                            <input type="radio" name="bib_retrieval_method" value="at_event" required> At Event
+                        </label>
+                        <label class="choice">
+                            <input type="radio" name="bib_retrieval_method" value="by_mail" required> By Mail
+                        </label>
                     </fieldset>
                     <div class="field">
-                        <label for="details">Request details</label>
-                        <p class="help" id="details-help">Explain the expected content and any limit before entry.</p>
-                        <textarea id="details" name="details" aria-describedby="details-help"></textarea>
+                        <p class="help">Enter the full shipping address where you would like your race bib to be sent.</p>
+                        <label for="delivery_address">Shipping Address</label>
+                        <input id="delivery_address" type="text" name="delivery_address" autocomplete="street-address">
                     </div>
-                    <button type="submit">Replace with a specific action</button>
+                    <fieldset>
+                        <legend>Team Participation</legend>
+                        <p class="help">Indicate if you are participating as part of a team and provide the team name if applicable.</p>
+                        <label class="choice">
+                            <input type="radio" name="team_participation" value="yes" required> Yes
+                        </label>
+                        <label class="choice">
+                            <input type="radio" name="team_participation" value="no" required> No
+                        </label>
+                    </fieldset>
+                    <div class="field">
+                        <label for="team_name">Team Name (if applicable) </label>
+                        <input type="text" id="team_name" name="team_name">
+                    </div>
+                    <button type="submit">Submit race application!</button>
                 </form>
                 <section id="states">
                     <h2>F5 · State and Recovery Specimen</h2>
