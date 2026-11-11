@@ -46,14 +46,84 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Yes/No</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace or N/A</td>
-                        <td>Replace or none</td>
-                        <td>Replace</td>
+                        <td>Full Name</td>
+                        <td>This data is necessary for identifying the individual, tracking during the race, picture taking, and bib creation.</td>
+                        <td>Yes</td>
+                        <td>input type="text"</td>
+                        <td>full_name=[value]</td>
+                        <td>autocomplete="name"</td>
+                        <td>Required</td>
+                        <td>Minimization: Collect only the full name as needed for identification and race tracking.</td>
+                    </tr>
+                     <tr>
+                        <td>Are you at least 18 years old?</td>
+                        <td>This data is necessary for ensuring that the individual meets the minimum age requirement for participation in the race.</td>
+                        <td>Yes</td>
+                        <td>input type="checkbox"</td>
+                        <td>age_verified=[yes/no]</td>
+                        <td>autocomplete="off"</td>
+                        <td>Required</td>
+                        <td>Minimization: Collect only age verification as needed for eligibility.</td>
+                    </tr>
+                     <tr>
+                        <td>How would you like to receive your race day bib?</td>
+                        <td>This data is necessary for determining how the individual would like to receive their race day bib.</td>
+                        <td>Yes</td>
+                        <td>input type="radio"</td>
+                        <td>bib_retrieval_method=[pickup/shipping]</td>
+                        <td>autocomplete="off"</td>
+                        <td>Required</td>
+                        <td>Minimization: Collect only the preferred method for getting the race day bib.</td>
+                    </tr>
+                     <tr>
+                        <td>Address for Bib Shipping</td>
+                        <td>This data is necessary for shipping the race day bib to the individual.</td>
+                        <td>No</td>
+                        <td>input type="text"</td>
+                        <td>delivery_address=[value]</td>
+                        <td>autocomplete="street-address"</td>
+                        <td>Optional</td>
+                        <td>Minimization: Collect only the address as necessary for shipping the race day bib.</td>
+                    </tr>
+                     <tr>
+                        <td>Which event are you running in?</td>
+                        <td>This data is necessary for identifying the event the individual is participating in for bib printout, race organization and scheduling.</td>
+                        <td>Yes</td>
+                        <td>input type="radio"</td>
+                        <td>event=[5k,10k,Half,Full]</td>
+                        <td><N></A></td>
+                        <td>Required</td>
+                        <td>Minimization: Collect only the event as necessary for identifying the individual's event preference.</td>
+                    </tr>
+                     <tr>
+                        <td>Are you running with a Team?</td>
+                        <td>This data is necessary for identifying whether the individual is running with a team, tracking the team during the race, and team name included on bib creation.</td>
+                        <td>Yes</td>
+                        <td>input type="radio"</td>
+                        <td>running_with_team=[yes,no]</td>
+                        <td>autocomplete="off"</td>
+                        <td>Required</td>
+                        <td>Minimization: Collect only the information as necessary for identifying whether the individual is running with a team.</td>
+                    </tr>
+                     <tr>
+                        <td>If applicable, provide team name here.</td>
+                        <td>This data is necessary for identifying the team, tracking the team during the race, and including the team name on bib creation.</td>
+                        <td>No</td>
+                        <td>input type="text"</td>
+                        <td>team_name=[value]</td>
+                        <td>autocomplete="off"</td>
+                        <td>Optional</td>
+                        <td>Minimization: Collect only the team name as necessary for identification and race tracking.</td>
+                    </tr>
+                     <tr>
+                        <td>Email Address</td>
+                        <td>This data is necessary for proper dissemination of race day information, payment confirmation, and any applicable updates between now and your big day!.</td>
+                        <td>Yes</td>
+                        <td>input type="email"</td>
+                        <td>email=[value]</td>
+                        <td>autocomplete="email"</td>
+                        <td>Required</td>
+                        <td>Minimization: Collect only the email address as necessary for identification and race tracking.</td>
                     </tr>
                 </tbody>
             </table>
